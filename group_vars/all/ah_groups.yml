@@ -11,7 +11,7 @@ ah_users:
     last_name: 'Automation'
     email: 'ansible@rh.lab'
     is_superuser: false
-    password: 'allyourcontainersarebelongtous'
+    password: 'allyourcontainersarebelongtous' # notsecret
     state: 'present'
 
 ah_group_roles:
