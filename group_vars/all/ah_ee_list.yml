@@ -1,0 +1,26 @@
+---
+ee_list:
+  - name: "lab-ee"
+    pull: always
+    dependencies:
+      galaxy:
+        collections:
+          - name: infra.controller_configuration
+          - name: infra.ah_configuration
+          - name: infra.ee_utilities
+          - name: ansible.controller
+          - name: awx.awx
+          - name: containers.podman
+          - name: community.windows
+          - name: community.general
+      python:
+        - pywinrm
+        - python-dateutil
+        - awxkit
+
+ee_base_image: "{{ ah_host }}/ee-supported-rhel8:latest"
+ee_image_push: true
+ee_prune_images: false
+ee_create_ansible_config: false
+ee_pull_collections_from_hub: false
+ee_create_controller_def: true

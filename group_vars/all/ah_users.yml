@@ -1,0 +1,23 @@
+---
+#ah_users:
+#  - username: "{{ ah_username }}"
+#    password: "{{ ah_password }}"
+#    groups:
+#      - "admins"
+#    append: true
+#    is_superuser: true
+#    state: "present"
+#  - username: "view_user"
+#    password: "viewer"
+#    groups:
+#      - "viewers"
+#    append: true
+#    is_superuser: false
+#    state: "present"
+#  - username: "admin_test_user"
+#    password: "admin"
+#    groups:
+#      - "admins"
+#    append: true
+#    is_superuser: false
+#    state: "present"

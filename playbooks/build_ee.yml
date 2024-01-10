@@ -1,0 +1,15 @@
+---
+- name: Playbook to configure execution environments
+  hosts: all
+  gather_facts: false
+  connection: local
+  vars_files:
+    - "../vault.yml"
+  tasks:
+    - name: include ee_builder role
+      ansible.builtin.include_role:
+        name: infra.ee_utilities.ee_builder
+    
+    - name: Add execution environment to controller
+      ansible.builtin.include_role:
+        name: infra.controller_configuration.execution_environments

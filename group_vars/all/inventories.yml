@@ -1,0 +1,9 @@
+---
+controller_inventories:
+  - name: AAP-machines
+    description: AAP VMs
+    organization: Default
+    
+  - name: test-targets
+    description: Random testing targets
+    organization: Default

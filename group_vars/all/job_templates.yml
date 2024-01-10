@@ -1,0 +1,52 @@
+---
+controller_templates:
+  - name: Update_controller_configuration
+    project: config_as_code
+    job_type: run
+    playbook: playbooks/controller_config.yml
+    inventory: AAP-machines
+    execution_environment: "lab-ee"
+    concurrent_jobs_enabled: false
+    verbosity: 0
+    credentials:
+      - aap_admin
+      - ah_admin_user_pass
+      - ryan_vault
+  - name: eda-restore-webserver
+    project: eda_webserver_demo
+    job_type: run
+    playbook: playbooks/restore_webserver.yml
+    inventory: test-targets
+    limit: webservers
+    execution_environment: "lab-ee"
+    become_enabled: true
+    concurrent_jobs_enabled: false
+    verbosity: 0
+    credentials:
+      - admin_machine
+  - name: eda-break-webserver
+    project: eda_webserver_demo
+    job_type: run
+    playbook: playbooks/break_webserver.yml
+    inventory: test-targets
+    limit: webservers
+    execution_environment: "lab-ee"
+    concurrent_jobs_enabled: false
+    verbosity: 0
+    become_enabled: true
+    credentials:
+      - admin_machine
+  - name: RHEL8_CIS_audit
+    project: rhel8_CIS
+    job_type: run
+    playbook: site.yml
+    inventory: test-targets
+    execution_environment: "lab-ee"
+    concurrent_jobs_enabled: false
+    limit: rhel8
+    become_enabled: true
+    verbosity: 0
+    credentials:
+      - admin_machine
+    job_tags: "level1_server, level2_server"
+    extra_vars: "setup_audit=true, run_audit=true, audit_format=documentation"

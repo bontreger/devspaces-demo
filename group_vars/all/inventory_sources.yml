@@ -1,0 +1,35 @@
+---
+controller_inventory_sources:
+  - name: aap-machines-source
+    organization: Default
+    source: scm
+    source_project: config_as_code
+    source_path: aap-inventory.yml
+    inventory: AAP-machines
+    credential: ""
+    overwrite: true
+    overwrite_vars: true
+    update_on_launch: false
+    update_cache_timeout: 0
+  - name: other-machines-source
+    organization: Default
+    source: scm
+    source_project: config_as_code
+    source_path: other-inventory
+    inventory: test-targets
+    credential: ""
+    overwrite: true
+    overwrite_vars: true
+    update_on_launch: false
+    update_cache_timeout: 0
+  - name: cis-source
+    organization: Default
+    source: scm
+    source_project: config_as_code
+    source_path: cis-inventory
+    inventory: test-targets
+    credential: ""
+    overwrite: true
+    overwrite_vars: true
+    update_on_launch: false
+    update_cache_timeout: 0    

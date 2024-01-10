@@ -1,0 +1,36 @@
+---
+controller_configuration_projects_async_delay: 5
+controller_projects:
+  - name: config_as_code
+    description: Configuration as code self-building
+    organization: Default
+    scm_type: git
+    scm_url: https://git.bontreger.dev/ryan/aap-casc.git
+    scm_branch: ""
+    scm_clean: true
+    scm_update_on_launch: true
+    scm_credential: ryan_gitlab
+    update_project: true
+    wait: true
+  - name: rhel8_CIS
+    description: CIS Benchmark for RHEL 8
+    organization: Default
+    scm_type: git
+    scm_url: https://git.bontreger.dev/ryan/RHEL8-CIS.git
+    scm_branch: ""
+    scm_clean: true
+    scm_update_on_launch: true
+    scm_credential: ryan_gitlab
+    update_project: true
+    wait: true
+  - name: eda_webserver_demo
+    description: EDA Webserver Demonstration Project
+    organization: Default
+    scm_type: git
+    scm_url: https://git.bontreger.dev/ryan/eda-webserver-demo.git
+    scm_branch: ""
+    scm_clean: true
+    scm_update_on_launch: true
+    scm_credential: ryan_gitlab
+    update_project: true
+    wait: true

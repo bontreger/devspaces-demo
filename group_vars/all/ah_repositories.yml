@@ -1,0 +1,19 @@
+---
+ah_collection_remotes:
+  - name: rh-certified
+    url: https://console.redhat.com/api/automation-hub/content/published/
+    auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
+    token: "{{ redhat_hub_token }}"
+  - name: community
+    url: https://galaxy.ansible.com/api/
+  - name: validated
+    url: https://console.redhat.com/api/automation-hub/content/validated/
+    auth_url: https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
+    token: "{{ redhat_hub_token }}"
+
+ah_collection_repositories:
+  - name: rh-certified
+    description: "Red Hat certified repository"
+
+ah_configuration_collection_repository_sync_async_delay: 5
+ah_configuration_collection_repository_sync_async_retries: 150

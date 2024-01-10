@@ -1,0 +1,6 @@
+---
+controller_user_accounts:
+  - user: ryan
+    is_superuser: true
+    password: "{{ controller_password }}"
+    email: "bontreger@redhat.com"

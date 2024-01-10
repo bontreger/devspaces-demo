@@ -1,0 +1,6 @@
+---
+collections:
+  - name: infra.controller_configuration
+  - name: infra.ah_configuration
+  #- name: awx.awx
+  #- name: ansible.controller

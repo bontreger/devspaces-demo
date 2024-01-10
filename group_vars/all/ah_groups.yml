@@ -1,0 +1,23 @@
+---
+ah_groups:
+  - name: ee_publisher
+#  - name: admins
+#  - name: viewers
+ah_users:
+  - username: 'ansible'
+    groups:
+      - 'ee_publisher'
+    first_name: 'Ansible'
+    last_name: 'Automation'
+    email: 'ansible@rh.lab'
+    is_superuser: false
+    password: 'allyourcontainersarebelongtous'
+    state: 'present'
+
+ah_group_roles:
+  - groups:
+      - 'ee_publisher'
+    role_list:
+      - roles:
+          - 'galaxy.execution_environment_publisher'
+    state: 'present'

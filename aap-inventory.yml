@@ -1,0 +1,15 @@
+---
+all:
+  children:
+    automationcontroller:
+      hosts:
+        control:
+          ansible_host: "ansible.bontreger.dev"
+    automationhub:
+      hosts:
+        hub:
+          ansible_host: "pah.bontreger.dev"
+    eventdrivencontroller:
+      hosts:
+        eda:
+          ansible_host: "eda.bontreger.dev"
